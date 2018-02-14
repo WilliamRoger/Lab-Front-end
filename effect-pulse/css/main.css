@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: whitesmoke;
+}
+
+#main {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sticker {
+	height: 100px;
+	width: 100px;
+	background-color: #673ab7;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sticker img {
+	width: 90%;
+}
+
+.sticker:hover {
+	cursor: pointer;
+}
+
+.sticker:hover:before {
+	-webkit-animation: pulseEffect 2s infinite linear;
+}
+
+.sticker:hover:after {
+	-webkit-animation: pulseEffect2 2s infinite linear;
+}
+
+.sticker:before,
+.sticker:after {
+	content: '';
+  height: 100px;
+  width: 100px;
+  background-color: silver;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes pulseEffect {
+	from {
+		transform: scale(0.5);
+		opacity: 0.4;
+	}
+	to {
+		transform: scale(3);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes pulseEffect2 {
+	from {
+		transform: scale(0);
+		opacity: 0.6;
+	}
+	to {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
